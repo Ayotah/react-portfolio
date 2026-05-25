@@ -1,0 +1,117 @@
+/* ===== ABOUT PAGE ===== */
+.about {
+  min-height: 100vh;
+  padding: 120px 2rem 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+.about__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.about__intro {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.about__divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+  margin-bottom: 3.5rem;
+  animation: fadeUp 0.5s 0.25s ease both;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+
+.about__block {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--transition);
+}
+
+.about__block:hover {
+  border-color: var(--border);
+}
+
+.about__block h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.about__block p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about__stack {
+  margin-top: 3rem;
+  animation: fadeUp 0.5s 0.4s ease both;
+}
+
+.about__stack h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about__tag {
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--accent-dim);
+  color: var(--accent-light);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
