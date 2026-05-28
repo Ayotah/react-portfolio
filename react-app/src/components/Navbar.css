@@ -38,6 +38,9 @@
 
 .navbar__link {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   padding: 0.45rem 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -64,41 +67,79 @@
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background: var(--accent);
+  background: var(--accent-light);
   border-radius: 2px;
 }
+
+.navbar__cta {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(127, 119, 221, 0.3);
+  color: var(--accent-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.navbar__cta:hover {
+  background: rgba(127, 119, 221, 0.22);
+}
+
+.navbar__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: color var(--transition), background var(--transition);
+}
+
+.navbar__toggle i {
+  font-size: 1.35rem;
+}
+
+.navbar__toggle:hover {
+  background: transparent;
+  color: var(--text-primary);
+}
+
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 
   .navbar__links {
     display: none;
-    flex-direction: column;
-    gap: 0.5rem;
     position: absolute;
     top: 68px;
-    right: -1.5rem;
-    background: rgba(10, 10, 15, 0.95);
+    right: 1.25rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(10, 10, 15, 0.96);
     backdrop-filter: blur(16px);
     border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    padding: 0.75rem;
+    min-width: 220px;
+    max-width: calc(100vw - 2.5rem);
   }
 
-  .navbar__toggle{
+  .navbar__link {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__toggle {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    transition: color var(--transition), background var(--transition);
-    align-self: flex-end;
-    justify-content: center;
-    height: 38px;
-    width: 38px;
   }
 }
